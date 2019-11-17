@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;display:inline-flex">
+        <img class="card-img-top" [src]="photo" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">{{titre}}</h5>
+          <p class="card-text"><strong>{{prix}} DT</strong><br/><i>{{ref}}/{{i}}</i></p>
+          <a routerLink="/info" class="btn"style="background-color:#343a40;color:white;"  (click)="getindex()">Plus d'infos</a>
+        </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" style="height: 400px;">
+            <img class="d-block w-100" [src]="tabproduit[0].photo" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                    <h5>....</h5>
+                    <p>....</p>
+                  </div>
+          </div>
+        </div>
+      </div><br/>
+
+      
+<h1>ArtWorks </h1><br/>
+<div class="container">
+    <app-produit *ngFor="let n of tabproduit; let index=index" [ref]="n.ref" [titre]="n.titre" [photo]="n.photo" [prix]="n.prix" [i]="index"></app-produit>
+</div>    
+
