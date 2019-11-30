@@ -1,2 +1,21 @@
 
-<p>{{tabproduit[index].titre}}</p>
+
+<div class="bg-dark mr-md pt px pt-md px-md text-center text-white overflow-hidden" style="border-radius: 21px;">
+    <div class="my py">
+      <h2 class="display-4">{{produit.titre}}</h2>
+      <p class="lead">
+        {{produit.datepost|date}} 
+        <strong> /
+      <span *ngIf="produit.disponible;else Blocelse" [ngClass]="produit.disponible?'c':'c1'">Disponible</span>
+      <ng-template #Blocelse>Indisponible</ng-template>
+    </strong>
+  
+</p>
+    </div>
+    <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 750px; border-radius: 21px;margin-bottom: 40px;">
+      <img [src]="produit.photo" style="width: 80%;margin-top: 30px;margin-bottom: 20px; border-radius: 21px;"/>
+      <p style="font-style: italic;color: #343a40;">référence: {{produit.ref}}</p>
+      <h1 style="color: #343a40;">prix: <span style="font-size:200%;">{{produit.prix}} <sup>DT</sup> </span></h1>
+      <a [routerLink]="['/modifierProduit',id]"class="btn"style="background-color:#343a40;color:white;">Modifier l'article</a>
+    </div>
+  </div>

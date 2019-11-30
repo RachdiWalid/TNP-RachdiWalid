@@ -1,6 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
-import{ProduitService, Produits} from '../produit.service';
-
+import{ProduitService} from '../produit.service';
+import {Produits} from './../Produits'
 
 @Component({
   selector: 'app-produit',
@@ -14,7 +14,7 @@ export class ProduitComponent implements OnInit {
 @Input()titre:string;
 @Input()ref:string;
 @Input()prix:number;
-@Input()i:number;
+@Input()id:number;
 
 
 

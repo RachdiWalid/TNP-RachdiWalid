@@ -1,0 +1,26 @@
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">     
+        
+        <div class="text-center mb-4"> 
+          <h1 class="h3 mb-3 font-weight-normal">Connectez-Vous</h1>
+          <p>Pour connecter en admin utilisez "admin/admin" comme identifiant.</p>
+        </div>
+      
+        <div class="form-label-group">
+             <label for="username">Username</label>
+          <input type="text" id="username" class="form-control" [(ngModel)]="username" name="username" placeholder="Username" required />
+        </div>
+      
+        <div class="form-label-group">
+            <label for="inputPassword">Password</label>
+            <input type="password" id="inputPassword" name="mdp" [(ngModel)]="mdp" class="form-control" placeholder="Password" required/>
+        </div>
+      
+    <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
+    <div [hidden]="!submitted">vous êtes connecter
+      <a routerLink="/">retour à la page principale</a>
+    </div>
+        <p class="mt-5 mb-3 text-muted text-center">© 2019</p>
+  </div>
+</form>
+      
