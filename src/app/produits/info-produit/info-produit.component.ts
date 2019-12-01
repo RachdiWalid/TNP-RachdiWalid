@@ -12,6 +12,10 @@ export class InfoProduitComponent implements OnInit {
   
   id:number;
   produit: Produits;
+  message:string="";
+  deleteProduit(id:number)
+  {this.produitservice.deleteProduit(id);
+  this.message="cet article a ètè supprimé !"};
   
   
   
@@ -21,9 +25,8 @@ export class InfoProduitComponent implements OnInit {
     
     this.id= this.activatedRoute.snapshot.params['id'];
     this.produit=this.produitservice.tabproduit[this.id];
+    }
 
-
-  }
   
   
 }

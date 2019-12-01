@@ -12,6 +12,8 @@ import { Error404Component } from './produit/error404/error404.component';
 import { LoginComponent } from './produit/login/login.component';
 import { ModifierProduitComponent } from './produits/modifier-produit/modifier-produit.component';
 import { ContactComponent } from './produits/contact/contact.component';
+import { TitreProduitsPipe } from './produits/titre-produits.pipe';
+import { RechercheProduitComponent } from './produits/recherche-produit/recherche-produit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ContactComponent } from './produits/contact/contact.component';
     Error404Component,
     LoginComponent,
     ModifierProduitComponent,
-    ContactComponent
+    ContactComponent,
+    TitreProduitsPipe,
+    RechercheProduitComponent
   ],
   imports: [
     BrowserModule,

@@ -47,5 +47,9 @@ export class ProduitService {
   public modifyProduit(produit:Produits,id:number)
   {this.tabproduit[id]=produit;
   return true;}
+  public deleteProduit(id:number)
+  {
+    return this.tabproduit.splice(id,1);
+  }
 
 }

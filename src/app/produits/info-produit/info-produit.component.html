@@ -2,7 +2,7 @@
 
 <div class="bg-dark mr-md pt px pt-md px-md text-center text-white overflow-hidden" style="border-radius: 21px;">
     <div class="my py">
-      <h2 class="display-4">{{produit.titre}}</h2>
+      <h2 class="display-4">{{produit.titre| titreProduits}}</h2>
       <p class="lead">
         {{produit.datepost|date}} 
         <strong> /
@@ -16,6 +16,8 @@
       <img [src]="produit.photo" style="width: 80%;margin-top: 30px;margin-bottom: 20px; border-radius: 21px;"/>
       <p style="font-style: italic;color: #343a40;">référence: {{produit.ref}}</p>
       <h1 style="color: #343a40;">prix: <span style="font-size:200%;">{{produit.prix}} <sup>DT</sup> </span></h1>
-      <a [routerLink]="['/modifierProduit',id]"class="btn"style="background-color:#343a40;color:white;">Modifier l'article</a>
+      <a [routerLink]="['/modifierProduit',id]" class="btn"style="background-color:#343a40;color:white;">Modifier l'article</a>
+    <button class="btn"style="background-color:#343a40;color:white;margin-left:10px;"(click)="deleteProduit(id)">Supprimer l'article</button>
+    <p style="color: black;">{{message}}</p>
     </div>
   </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProduitService } from '../produit.service';
-import {Produits} from './../Produits';
 import { ActivatedRoute } from '@angular/router';
+import {Produits} from './../Produits';
 import {NgForm} from '@angular/forms';
 
 @Component({
@@ -32,9 +32,9 @@ onSubmit(f2:NgForm)
     this.submitted=this.produitservice.modifyProduit(this.produit,this.id);
     if (this.submitted)
     {this.message="Votre nouveau produit "+this.titre1+" a bien été modifier";}
+}
 
 
- }
   ngOnInit() {
     
     this.id= this.activatedRoute.snapshot.params['id'];

@@ -14,5 +14,7 @@
 <h1>ArtWorks </h1><br/>
 <div class="text-center">
     <app-produit *ngFor="let n of tabproduit; let i=index" [ref]="n.ref" [titre]="n.titre" [photo]="n.photo" [prix]="n.prix" [id]="i"></app-produit>
-</div>    
+</div>
+<br/>
+<a routerLink="/recherche" class="btn btn-primary">Faire une recherche</a>    
 

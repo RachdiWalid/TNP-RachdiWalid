@@ -1,0 +1,24 @@
+<h1>Recherche d'un Produit</h1>
+<form (ngSubmit)="onSubmit(f3)" #f3="ngForm">
+    <div class="form-group">
+<label for="prix">
+    Prix Max :
+</label>
+<input type="number" name="prix" id="prix" [(ngModel)]="pmax" placeholder="les prix des produits qui seront affichés sont au dessous de votre entrée " class="form-control" #prix="ngModel"/>
+<div *ngIf="prix.invalid && prix.dirty" class="alert alert-danger">
+    ce champs est invalide
+</div>
+<label for="datepost">
+    Date du post :
+</label>
+<input type="test" name="datepost" id="datepost" [(ngModel)]="datemax" placeholder="les produits qui seront affichés ont été poster avant votre entrée " pattern="^((0|1)\d{1})/((0|1|2)\d{1})/((19|20)\d{2})" class="form-control" #date="ngModel"/>
+<div *ngIf="date.invalid && date.dirty" class="alert alert-danger">
+    ce champs doit être sous cette forme "MM/JJ/AAAA"
+</div>
+<button type="submit" class="btn btn-primary">Recherche</button>
+    </div>
+</form>
+
+<div class="text-center">
+    <app-produit *ngFor="let n of tabrecherche; let i=index" [ref]="n.ref" [titre]="n.titre" [photo]="n.photo" [prix]="n.prix" [id]="i"></app-produit>
+</div>

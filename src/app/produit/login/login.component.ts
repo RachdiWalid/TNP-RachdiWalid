@@ -10,10 +10,12 @@ import {NgForm} from '@angular/forms';
 export class LoginComponent implements OnInit {
   username:string;
   mdp:string;
-  submitted:boolean
+  submitted:boolean;
   constructor(private produitservice:ProduitService) { }
   onSubmit(f:NgForm)
- { this.submitted=this.produitservice.islogin(this.username,this.mdp)
+ { this.submitted=this.produitservice.islogin(this.username,this.mdp);
+  if (!this.submitted)
+  {alert("identifiant ou mot de passe incorrect");}
 }
   ngOnInit() {
     

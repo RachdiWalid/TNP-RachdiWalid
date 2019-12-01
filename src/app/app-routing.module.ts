@@ -8,6 +8,7 @@ import { LoginComponent } from './produit/login/login.component';
 import { AjouterProduitComponent } from './produits/ajouter-produit/ajouter-produit.component';
 import { ModifierProduitComponent } from './produits/modifier-produit/modifier-produit.component';
 import { ContactComponent } from './produits/contact/contact.component';
+import { RechercheProduitComponent } from './produits/recherche-produit/recherche-produit.component';
 
 const routes: Routes = [
   {path:'', component: ProduitListComponent},
@@ -18,11 +19,13 @@ const routes: Routes = [
   {path:'ajouterProduit',component:AjouterProduitComponent},
   {path:"modifierProduit/:id",component:ModifierProduitComponent},
   {path:'contact',component:ContactComponent},
+  {path:'recherche',component:RechercheProduitComponent},
   {path:'**',component: Error404Component}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule
+          ]
 })
 export class AppRoutingModule { }
