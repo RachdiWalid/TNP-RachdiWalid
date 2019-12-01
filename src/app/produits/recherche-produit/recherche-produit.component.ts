@@ -22,7 +22,7 @@ export class RechercheProduitComponent implements OnInit {
     if((this.pmax==null)&&(this.datemax!=null))
     {let d=new Date(this.datemax);
       for(let i=0;i<this.tabproduit.length;i++)
-      {if(this.tabproduit[i].datepost<d)
+      {if(this.tabproduit[i].datepost<=d)
       this.tabrecherche.push(this.tabproduit[i]);}
     }
     else if((this.pmax!=null)&&(this.datemax==null))
